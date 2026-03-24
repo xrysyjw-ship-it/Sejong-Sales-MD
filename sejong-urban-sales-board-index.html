@@ -23,7 +23,7 @@
 .cr1 .btag{font-size:7px;color:rgba(255,255,255,.65);margin-top:2px;font-style:italic;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .mdot{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);width:5px;height:5px;background:#FDD835;border-radius:50%;z-index:2}
 .r1-dv{background:#8B1A1A}.r1-dl{background:#C0392B}.r1-dd{background:#7B6F3E}
-.r1-bg{background:#1B5E20}.r1-bj{background:#0D47A1}.r1-be{background:#BF360C}
+.r1-bg{background:#2E7D32}.r1-bj{background:#1565C0}.r1-be{background:#E65100}
 
 /* TOP-LEFT triangle: 분양 (orange tone matching cr2) */
 .tl{position:absolute;top:-1px;left:-1px;width:28px;height:28px;overflow:hidden;z-index:3;cursor:pointer}
@@ -193,7 +193,7 @@ function allDev(){const a=[];FO.forEach(fk=>F[fk].forEach(s=>s.r.forEach(r=>{if(
 function cellH(r){
   const ss=SS[r.u]||"vacant";const ls=LS[r.u]||"vacant";const m=MM[r.u]||{};
   const isDev=r.o==="dev";const hl=r.l&&r.l!=="공실"&&r.l!=="";const ht=r.t&&r.t!=="미분양"&&r.t!=="수분양자";
-  let r1c;if(isDev)r1c=ss==="done"&&r.u.startsWith("B1")?"r1-dd":hl?"r1-dl":"r1-dv";
+  let r1c;if(isDev)r1c=ss==="done"&&r.u.startsWith("B1")?"r1-dd":"r1-dv";
   else r1c=r.gr==="jackson"?"r1-bj":r.gr==="exhibit"?"r1-be":"r1-bg";
   // Top-left: 분양
   let tl;if(ss!=="vacant")tl=`<div class="tl ${SRC[ss]}" onclick="event.stopPropagation();cySS('${r.u}')"><span>${SL[ss]}</span></div>`;
